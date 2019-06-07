@@ -1,0 +1,118 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Requisições API POA - Dimed",
+		"_postman_id": "65f25ba5-d224-856a-58f2-e8a8940315e5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/poa/carregar/linhas",
+			"request": {
+				"url": "http://localhost:8080/poa/carregar/linhas",
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Requisição para carregar a base da API. Irá buscar as Linhas e os Itinerários na API do PoaTransporte e carregar na base de dados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/linhas/distancia/-30.07291171164/-51.233080401857/1.0",
+			"request": {
+				"url": "http://localhost:8080/poa/linhas/distancia/-30.07291171164/-51.233080401857/1.0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Consultar Linhas a partir de Latitude, Longitude e Raio."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/linhas/latitude/-30.07291171164/-51.233080401857/1.0/5082",
+			"request": {
+				"url": "http://localhost:8080/poa/linhas/latitude/-30.07291171164/-51.233080401857/1.0/5082",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Consultar Latitudes de Linhas, a partir de Latitude, Longitude, Raio e Id da Linha."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/cliente",
+			"request": {
+				"url": "http://localhost:8080/poa/cliente",
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\": \"Cliente\",\"cpf\": \"948573849\",\"linhas\": [{\"id\": 5529},{\"id\": 5530},{\"id\": 5037}]}\r\n"
+				},
+				"description": "Cadastrar usuários e linhas dos usuários."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/linha/PERIMETRAL",
+			"request": {
+				"url": "http://localhost:8080/poa/linha/PERIMETRAL",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Consultar Linhas a partir do Nome."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/itinerario/5555",
+			"request": {
+				"url": "http://localhost:8080/poa/itinerario/5555",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Consultar Itinerário por ID da Linha."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/poa/linhas",
+			"request": {
+				"url": "http://localhost:8080/poa/linhas",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Consultar Linhas da API POATransporte"
+			},
+			"response": []
+		}
+	]
+}
